@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>分类</title>
+<!-- 引入站点图标 -->
+<link rel="icon" href="./images/favicon.ico">
+<!-- //引入原生JS  第三方的框架 -->
+<link rel="stylesheet" href="./lib/mui/css/mui.css">
+<!-- 第三方的字体图标 -->
+<link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+<!-- 引入自己的 样式less文件 -->
+<link rel="stylesheet/less" href="less/category.less">
+<!-- less编译文件 -->
+
+<script src="./lib/less/less.js"></script>
+<script src="js/rem.js"></script>
+</head>
+<body>
+    <header id="header">
+        <a href="#" class="left fa fa-arrow-left"></a>
+        <form action="#" class="center"><input type="text" placeholder="请输入你要搜索的内容"></form>
+        <a href="search.html" class="right fa fa-search"></a>
+    </header>
+    <main id="main">
+        <div class="category-left">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <ul>
+                        <li class="active"><a href="#">运动馆</a></li>
+                        <li><a href="#">男士馆</a></li>
+                        <li><a href="#">女士馆</a></li>
+                        <li><a href="#">帆布馆</a></li>
+                        <li><a href="#">户外馆</a></li>
+                    </ul>
+                    <!--这里放置真实显示的DOM内容-->
+                </div>
+            </div>
+            <!-- <ul>
+                <li class="active"><a href="#">运动馆</a></li>
+                <li><a href="#">男士馆</a></li>
+                <li><a href="#">女士馆</a></li>
+                <li><a href="#">帆布馆</a></li>
+                <li><a href="#">户外馆</a></li>
+            </ul> -->
+        </div>
+        <div class="category-right">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!--这里放置真实显示的DOM内容-->
+                    <div class="mui-row">
+                        <div class="mui-col-xs-4 ">
+                            <a href="#"><img src="./images/brand1.png" alt="">
+                                <p>耐克</p>
+                            </a>
+                        </div>
+                        <div class="mui-col-xs-4 ">
+                            <a href="#"><img src="./images/brand2.png" alt="">
+                                <p>踏步</p>
+                            </a>
+                        </div>
+                        <div class="mui-col-xs-4 ">
+                            <a href="#"><img src="./images/brand3.png" alt="">
+                                <p>特步</p>
+                            </a>
+                        </div>
+                        <div class="mui-col-xs-4 ">
+                            <a href="#"><img src="./images/brand4.png" alt="">
+                                <p>安踏</p>
+                            </a>
+                        </div>
+                        <div class="mui-col-xs-4 ">
+                            <a href="#"><img src="./images/brand5.png" alt="">
+                                <p>阿迪达斯</p>
+                            </a>
+                        </div>
+                        <div class="mui-col-xs-4">
+                            <a href="#"><img src="./images/brand6.png" alt="">
+                                <p>贵人鸟</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="mui-row">
+            <div class="mui-col-xs-3"><a href="index.html"><i class="fa fa-home"></i><span>首页</span></a></div>
+            <div class="mui-col-xs-3"><a href="category.html"><i class="fa fa-bars"></i><span>分类</span></a></div>
+            <div class="mui-col-xs-3"><a href="cart.html"><i class="fa fa-shopping-cart"></i><span>购物车</span></a></div>
+            <div class="mui-col-xs-3"><a href="user.html"><i class="fa fa-user"></i><span>个人中心</span></a></div>
+        </div>
+    </footer>
+    <script src="lib/mui/js/mui.js"></script>
+    <!-- 所有的 文件用zepto 获取元素   发送ajax请求-->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- 引入模板引擎文件 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
