@@ -1,18 +1,22 @@
 // 乐淘的主题颜色
 @main-color: #006699;
-*{
+* {
     padding: 0;
     margin: 0;
 }
-li{
+
+li {
     list-style: none;
 }
-img{
+
+img {
     vertical-align: middle;
 }
-a{
+
+a {
     color: #666;
 }
+
 body {
     padding: .45rem 0;
     height: 100vh;
@@ -43,7 +47,7 @@ body {
         line-height: .45rem;
         color: #fff;
         font-weight: normal;
-        input{
+        input {
             /* 去掉输入框默认底部margin */
             margin-bottom: 0;
             background-color: #fff;
@@ -75,6 +79,10 @@ body {
         color: #fff;
         flex-direction: column;
         justify-content: center;
-        align-items: center
+        align-items: center;
+        &.active {
+           background-color: #fff;
+           color: #000;
+        }
     }
 }
