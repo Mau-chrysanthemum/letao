@@ -1,0 +1,112 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+img {
+  vertical-align: middle;
+}
+a {
+  color: #666;
+}
+body {
+  padding: .45rem 0;
+  height: 100vh;
+  font-size: .14rem;
+  line-height: .14rem;
+  margin: 0 auto;
+  max-width: 750px;
+}
+#header {
+  display: flex;
+  text-align: center;
+  background-color: #006699;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+}
+#header .left {
+  width: .45rem;
+  height: .45rem;
+  line-height: .45rem;
+  color: #fff;
+}
+#header .center {
+  flex: 1;
+  margin: 0;
+  line-height: .45rem;
+  color: #fff;
+  font-weight: normal;
+}
+#header .center input {
+  /* 去掉输入框默认底部margin */
+  margin-bottom: 0;
+  background-color: #fff;
+  /* 把输入框的文字颜色改成黑色 */
+  color: #000;
+  /* 默认重复覆盖文字居左 */
+  text-align: left;
+}
+#header .right {
+  width: .45rem;
+  height: .45rem;
+  line-height: .45rem;
+  color: #fff;
+}
+#footer {
+  background-color: #006699;
+  height: .45rem;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  width: 100%;
+}
+#footer a {
+  display: flex;
+  height: .45rem;
+  color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#footer a.active {
+  background-color: #fff;
+  color: #000;
+}
+#main .search-form {
+  padding: .1rem;
+}
+#main .search-form form {
+  display: flex;
+}
+#main .search-form form input {
+  flex: 1;
+  margin-bottom: 0;
+  background-color: #fff;
+  text-align: left;
+  font-size: .14rem;
+  border: 1px solid #006699;
+  /* 输入框去掉右上角右小角的圆角 */
+  border-radius: .06rem 0 0 .06rem;
+}
+#main .search-form form button {
+  font-size: .14rem;
+  color: #fff;
+  background-color: #006699;
+  border-radius: 0 .06rem .06rem 0;
+}
+#main .search-histroy .mui-card .mui-card-header {
+  font-size: .14rem;
+}
+#main .search-histroy .mui-card .mui-card-content .mui-badge {
+  width: .24rem;
+  height: .24rem;
+  padding: 0.06rem;
+  text-align: center;
+  background-color: hotpink;
+}

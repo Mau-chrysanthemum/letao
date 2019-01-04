@@ -20,7 +20,7 @@
 </head>
 <body>
     <header id="header">
-        <a href="#" class="left fa fa-arrow-left"></a>
+        <a href="index.html" class="left fa fa-arrow-left"></a>
         <form action="#" class="center"><input type="text" placeholder="请输入你要搜索的内容"></form>
         <a href="search.html" class="right fa fa-search"></a>
     </header>
@@ -29,11 +29,11 @@
             <div class="mui-scroll-wrapper">
                 <div class="mui-scroll">
                     <ul>
-                        <li class="active"><a href="#">运动馆</a></li>
+                        <!-- <li class="active"><a href="#">运动馆</a></li>
                         <li><a href="#">男士馆</a></li>
                         <li><a href="#">女士馆</a></li>
                         <li><a href="#">帆布馆</a></li>
-                        <li><a href="#">户外馆</a></li>
+                        <li><a href="#">户外馆</a></li> -->
                     </ul>
                     <!--这里放置真实显示的DOM内容-->
                 </div>
@@ -51,7 +51,7 @@
                 <div class="mui-scroll">
                     <!--这里放置真实显示的DOM内容-->
                     <div class="mui-row">
-                        <div class="mui-col-xs-4 ">
+                        <!-- <div class="mui-col-xs-4 ">
                             <a href="#"><img src="./images/brand1.png" alt="">
                                 <p>耐克</p>
                             </a>
@@ -80,7 +80,7 @@
                             <a href="#"><img src="./images/brand6.png" alt="">
                                 <p>贵人鸟</p>
                             </a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -95,6 +95,26 @@
             <div class="mui-col-xs-3"><a href="user.html"><i class="fa fa-user"></i><span>个人中心</span></a></div>
         </div>
     </footer>
+    <!-- category-left左侧模板 -->
+    <script id="categoryLeftTpl" type="text/html">
+        {{each rows}}
+        <li class="{{$index==0?'active':''}}"><a href="#" data-id={{$value.id}}>{{$value.categoryName}}</a></li>
+        {{/each}}
+    </script>
+    <!-- categoryRighttpl 右侧模板 -->
+    <script id="categoryRightTpl" type="text/html">
+        {{if rows.length>0}}
+            {{each rows}}
+              <div class="mui-col-xs-4 ">
+               <a href="#"><img src="{{$value.brandLogo}}" alt="">
+                <p>{{$value.brandName}}</p>
+               </a>
+              </div>
+            {{/each }}
+         {{else}}
+           <p>此分类没有品牌</p>
+         {{/if}}
+    </script>
     <script src="lib/mui/js/mui.js"></script>
     <!-- 所有的 文件用zepto 获取元素   发送ajax请求-->
     <script src="./lib/zepto/zepto.min.js"></script>
