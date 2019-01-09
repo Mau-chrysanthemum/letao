@@ -1,0 +1,84 @@
+@import "base.less";
+body{
+    padding-bottom: .8rem;
+}
+#main {
+
+    .mui-table-view {
+        .mui-table-view-cell {
+            a {
+                /* 列表的a容器 */
+                &.mui-navigate-right {
+                    /*a容器里里面的左侧 商品图片和复选框*/
+                    .mui-pull-left {
+                        img {
+                            /* 要改max-width因为MUi设置 是max-width */
+                            max-width: .6rem;
+                            height: .6rem;
+                        }
+                        .mui-checkbox {
+                            text-align: center;
+                            /* 表示没选中之前的样式 */
+                            input {
+                                /* 去掉默认绝对定位 */
+                                position: static;
+                                /* 修改input复选框里面的伪元素的字体颜色 */
+                                &::before {
+                                    // content: "\e408";
+                                    color: hotpink;
+                                }
+                            }
+                            /* 表示选中了的样式 */
+                            input[type='checkbox']:checked:before {
+                                // content: "\e463";
+                                color: hotpink;
+                            }
+                        }
+                    }
+                    /* a容器里面的右侧商品信息 */
+                    .mui-media-body {
+                        line-height: .22rem;
+                        padding-left: .1rem;
+                        .product-name {
+                            /* 注意去掉商品名称的强制不换行属性  */
+                            white-space: normal;
+                        }
+                        .product-price {
+                            span {
+                                color: red;
+                            }
+                            del {
+                                color: #ccc;
+                            }
+                        }
+                        .product-params {
+                            display: flex;
+                            /* 设置2端对齐 */
+                            justify-content: space-between;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#order {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    z-index: 999;
+    /* 定位到footer上面 */
+    bottom: .45rem;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    line-height: .33rem;
+    border-top: 1px solid #ccc;
+    p {
+        margin-bottom: 0;
+        font-weight: 600;
+        color: red;
+        padding-left: .1rem;
+    }
+}

@@ -11,6 +11,12 @@ img {
 a {
   color: #666;
 }
+#main {
+  height: 100%;
+}
+input {
+  font-size: .14rem;
+}
 body {
   padding: .45rem 0;
   height: 100vh;
@@ -77,4 +83,29 @@ body {
 #footer a.active {
   background-color: #fff;
   color: #000;
+}
+#main {
+  position: relative;
+  /* 同时需要给main设置高度100% 让main在中间范围显示 继承body内容的高度 */
+  height: 100%;
+}
+#main .search-form form {
+  padding: .1rem;
+  display: flex;
+}
+#main .search-form form input {
+  flex: 1;
+  margin-bottom: 0;
+  background-color: #fff;
+  text-align: left;
+  font-size: .14rem;
+  border: 1px solid #006699;
+  /* 输入框去掉右上角右小角的圆角 */
+  border-radius: .06rem 0 0 .06rem;
+}
+#main .search-form form button {
+  font-size: .14rem;
+  color: #fff;
+  background-color: #006699;
+  border-radius: 0 .06rem .06rem 0;
 }

@@ -11,6 +11,9 @@ img {
 a {
   color: #666;
 }
+input {
+  font-size: .14rem;
+}
 body {
   padding: .45rem 0;
   height: 100vh;
@@ -78,13 +81,11 @@ body {
   background-color: #fff;
   color: #000;
 }
-.search-form {
+#main .search-form form {
   padding: .1rem;
-}
-.search-form form {
   display: flex;
 }
-.search-form form input {
+#main .search-form form input {
   flex: 1;
   margin-bottom: 0;
   background-color: #fff;
@@ -94,19 +95,22 @@ body {
   /* 输入框去掉右上角右小角的圆角 */
   border-radius: .06rem 0 0 .06rem;
 }
-.search-form form button {
+#main .search-form form button {
   font-size: .14rem;
   color: #fff;
   background-color: #006699;
   border-radius: 0 .06rem .06rem 0;
 }
-#main .search-histroy .mui-card .mui-card-header {
-  font-size: .14rem;
+#main .get-vcode {
+  position: absolute;
+  right: 0;
+  width: auto;
+  height: .4rem;
 }
-#main .search-histroy .mui-card .mui-card-content .mui-badge {
-  width: .24rem;
-  height: .24rem;
-  padding: 0.06rem;
-  text-align: center;
-  background-color: hotpink;
+#main .mui-button-row:last-child {
+  padding: .1rem;
+  height: auto;
+}
+#main .btn-register {
+  width: 100%;
 }

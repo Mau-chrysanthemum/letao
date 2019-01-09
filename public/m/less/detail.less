@@ -1,0 +1,36 @@
+@import "base.less";
+#main {
+    #detail {
+        p {
+            color: #333;
+        }
+    }
+    .product-size {
+        vertical-align: middle;
+        button {
+            vertical-align: middle;
+            margin-top: .05rem;
+            padding: 0.03rem 0.06rem
+        }
+    }
+}
+
+#footer {
+    background-color: #ccc;
+    .fa-shopping-cart {
+        font-size: .2rem;
+        color: #666;
+        line-height: .46rem;
+    }
+    .mui-row {
+        >div {
+            /* 只有从第二个div以后需要设置padding 排除掉第一个购车图标的div */
+            &:nth-child(n+2) {
+                padding: 5px;
+            }
+            button {
+                width: 100%;
+            }
+        }
+    }
+}

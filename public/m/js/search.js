@@ -17,11 +17,11 @@ $(function () {
         if (search == '') {
             mui.toast('请输入有效内容');
             return
-        }
+        } 
         
         var arr = localStorage.getItem('historyData1');
         // 给获取到的数组字符串  转换成数组切要做非空判断
-        arr = JSON.parse(arr) || []
+        arr = JSON.parse(arr || '[]')
         // 给数组去重  切给新输入的 内容添加到数组的最前面
         // 判断当前值在数组中存在 因为存在返回当前值的索引 不会是 - 1
         if (arr.indexOf(search) != -1) {
@@ -38,6 +38,7 @@ $(function () {
         $('.btn-ment').val('')
         // 输入完成后调用一次
         queryHistory()
+        location = 'productlist.html?key=' + search + '&time='+ new Date().getTime;
     })
     // 页面加载完成调用一次
     queryHistory()
@@ -45,7 +46,7 @@ $(function () {
     function queryHistory() {
         var arr = localStorage.getItem('historyData1');
         // 给获取到的数组字符串  转换成数组切要做非空判断
-        arr = JSON.parse(arr) || []
+        arr = JSON.parse(arr || '[]')
         //   调用模板
         var html = template('searchTpl', { rows: arr })
         // 给生成的模板渲染到页面上
@@ -53,14 +54,14 @@ $(function () {
     }
     // 删除全部
     $('.record').on('tap',function () {
-        localStorage.clear()
+        localStorage.removeItem('historyData1')
         queryHistory()
     })
     // 删除单个数据
     $('.search-cancel').on('tap', 'li>span', function () {
         var arr = localStorage.getItem('historyData1');
         // 给获取到的数组字符串  转换成数组切要做非空判断
-        arr = JSON.parse(arr) || []
+        arr = JSON.parse(arr || '[]')
         // 获取到当前点击的索引  
         var index = $(this).data('key')
         // console.log(index);
@@ -71,6 +72,13 @@ $(function () {
         // 给删除后的JSon  存储到本地
         localStorage.setItem('historyData1', arr)
         // 在调用一次  获取到的数据  渲染到页面上
-        queryHistory()
+        queryHistory();
     })
+    // 点击相应的 li标签  跳转到相应的内容页面
+    $('.search-cancel').on('tap', 'li', function () {
+        var search = $(this).data('value')
+        console.log(search);
+        
+         location = 'productlist.html?key=' + search + '&time=' + new Date().getTime;
+        })
 })

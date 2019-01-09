@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录页面</title>
+    <link rel="icon" href="./images/favicon.ico">
+    <!-- //引入原生JS  第三方的框架 -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <!-- 第三方的字体图标 -->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <!-- 引入自己的 样式less文件 -->
+    <link rel="stylesheet/less" href="less/login.less">
+    <!-- less编译文件 -->
+
+    <script src="./lib/less/less.js"></script>
+    <script src="js/rem.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <a href="#" class="left fa fa-arrow-left"></a>
+        <h4 class="center">个人中心</h4>
+        <a href="index.html" class="right "></a>
+    </header>
+    <main id="main">
+<form class="mui-input-group">
+    <div class="mui-input-row">
+        <label>用户名</label>
+        <input type="text" class="mui-input-clear username" placeholder="请输入用户名" value="itcast">
+    </div>
+    <div class="mui-input-row">
+        <label>密码</label>
+        <input type="password" class="mui-input-password password" placeholder="请输入密码" value="111111">
+    </div>
+    <div class="mui-button-row">
+<button type="button" class="mui-btn mui-btn-primary btn-login">登录</button>
+<button type="button" class="mui-btn mui-btn-danger btn-danger">免费注册</button>
+    </div>
+</form>
+    </main>
+    <footer id="footer">
+        <div class="mui-row">
+            <div class="mui-col-xs-3"><a href="index.html"><i class="fa fa-home"></i><span>首页</span></a></div>
+            <div class="mui-col-xs-3"><a href="category.html"><i class="fa fa-bars"></i><span>分类</span></a></div>
+            <div class="mui-col-xs-3"><a href="cart.html"><i class="fa fa-shopping-cart"></i><span>购物车</span></a></div>
+            <div class="mui-col-xs-3"><a href="user.html" class="active"><i class="fa fa-user"></i><span>个人中心</span></a></div>
+        </div>
+    </footer>
+    <script src="lib/mui/js/mui.js"></script>
+    <!-- 所有的 文件用zepto 获取元素   发送ajax请求-->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- 引入模板引擎文件 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="js/login.js"></script>
+</body>
+
+</html>

@@ -78,13 +78,11 @@ body {
   background-color: #fff;
   color: #000;
 }
-.search-form {
+#main .search-form form {
   padding: .1rem;
-}
-.search-form form {
   display: flex;
 }
-.search-form form input {
+#main .search-form form input {
   flex: 1;
   margin-bottom: 0;
   background-color: #fff;
@@ -94,19 +92,49 @@ body {
   /* 输入框去掉右上角右小角的圆角 */
   border-radius: .06rem 0 0 .06rem;
 }
-.search-form form button {
+#main .search-form form button {
   font-size: .14rem;
   color: #fff;
   background-color: #006699;
   border-radius: 0 .06rem .06rem 0;
 }
-#main .search-histroy .mui-card .mui-card-header {
+#main {
+  height: 100%;
+  position: relative;
+}
+#main .product-list {
+  /* 卡片内容 */
+}
+#main .product-list .mui-card-header {
   font-size: .14rem;
 }
-#main .search-histroy .mui-card .mui-card-content .mui-badge {
-  width: .24rem;
-  height: .24rem;
-  padding: 0.06rem;
+#main .product-list .mui-card-header a.active {
+  color: red;
+}
+#main .product-list .mui-card-content .mui-row > div {
+  /* 选中奇数div列 */
+  /* 选中偶数div列 */
+}
+#main .product-list .mui-card-content .mui-row > div:nth-child(odd) {
+  padding-right: .05rem;
+}
+#main .product-list .mui-card-content .mui-row > div:nth-child(even) {
+  padding-left: .05rem;
+}
+#main .product-list .mui-card-content .mui-row > div a {
+  display: block;
   text-align: center;
-  background-color: hotpink;
+  padding-bottom: .1rem;
+  box-shadow: 0px 0px 2px #ccc;
+}
+#main .product-list .mui-card-content .mui-row > div a img {
+  width: 100%;
+}
+#main .product-list .mui-card-content .mui-row > div a .product-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: .16rem;
 }

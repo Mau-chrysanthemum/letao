@@ -13,7 +13,7 @@ $(function () {
         success: function (data) {
             // console.log(data);
         // 调用模板 
-        var html = template('categoryLeftTpl',data)
+        var html =template('categoryLeftTpl',data)
             $('.category-left ul').html(html)
         }
     })  

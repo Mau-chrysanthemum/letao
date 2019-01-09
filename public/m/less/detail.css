@@ -11,6 +11,9 @@ img {
 a {
   color: #666;
 }
+input {
+  font-size: .14rem;
+}
 body {
   padding: .45rem 0;
   height: 100vh;
@@ -78,13 +81,11 @@ body {
   background-color: #fff;
   color: #000;
 }
-.search-form {
+#main .search-form form {
   padding: .1rem;
-}
-.search-form form {
   display: flex;
 }
-.search-form form input {
+#main .search-form form input {
   flex: 1;
   margin-bottom: 0;
   background-color: #fff;
@@ -94,19 +95,37 @@ body {
   /* 输入框去掉右上角右小角的圆角 */
   border-radius: .06rem 0 0 .06rem;
 }
-.search-form form button {
+#main .search-form form button {
   font-size: .14rem;
   color: #fff;
   background-color: #006699;
   border-radius: 0 .06rem .06rem 0;
 }
-#main .search-histroy .mui-card .mui-card-header {
-  font-size: .14rem;
+#main #detail p {
+  color: #333;
 }
-#main .search-histroy .mui-card .mui-card-content .mui-badge {
-  width: .24rem;
-  height: .24rem;
-  padding: 0.06rem;
-  text-align: center;
-  background-color: hotpink;
+#main .product-size {
+  vertical-align: middle;
+}
+#main .product-size button {
+  vertical-align: middle;
+  margin-top: .05rem;
+  padding: 0.03rem 0.06rem;
+}
+#footer {
+  background-color: #ccc;
+}
+#footer .fa-shopping-cart {
+  font-size: .2rem;
+  color: #666;
+  line-height: .46rem;
+}
+#footer .mui-row > div {
+  /* 只有从第二个div以后需要设置padding 排除掉第一个购车图标的div */
+}
+#footer .mui-row > div:nth-child(n+2) {
+  padding: 5px;
+}
+#footer .mui-row > div button {
+  width: 100%;
 }
